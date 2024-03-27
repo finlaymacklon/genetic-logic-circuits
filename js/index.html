@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genetic Logic Circuits</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <script src="./src/draw.js" type="text/javascript"></script>
+  <script type="text/javascript">
+
+    let request = new XMLHttpRequest();
+
+    request.addEventListener("load", (data) => {
+      const payload = JSON.parse(request.responseText);
+      const canvasId = 'circuitCanvas';
+      const nodes = payload.nodes;
+      const links = payload.links;
+      const nodeRadius = payload.nodeRadius;
+      drawCircuit(canvasId, nodeRadius, nodes, links);
+    });
+    request.open("GET", "/test");
+    request.send();
+
+  </script>
+</head>
+<body>
+	<div id="visualization" style="width: 1200px; height: 900px; overflow: scroll">
+		<canvas id="circuitCanvas" width="1600px" height="1600px"></canvas>
+	</div>
+</body>
+</html>
