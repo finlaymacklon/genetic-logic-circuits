@@ -2,7 +2,7 @@
 
 This repository contains files for my course project for *ECE720 Metaheuristic Optimization* at the University of Alberta (Fall 2020).
 
-Combinatorial logic circuits can be represented as binary trees, and binary trees can be "evolved" through genetic programming (GP)^[1]. 
+Combinatorial logic circuits can be represented as binary trees, and binary trees can be "evolved" through genetic programming (GP).[^1]
 
 **XOR gate as a combinatorial logic circuit**
 
@@ -36,4 +36,4 @@ Combinatorial logic circuits can be represented as binary trees, and binary tree
 - Add reducing operations to replace patterns of gates with a new black box "gate"
 - Optimize the code; it is pretty slow at the moment and I think it could be vectorized
 
-^[1]: Chapter 4, [*Global Optimization Algorithms: Theory and Application*](https://archive.org/details/Thomas_Weise__Global_Optimization_Algorithms_Theory_and_Application), T. Weise, 2013.
+[^1]: Chapter 4, [*Global Optimization Algorithms: Theory and Application*](https://archive.org/details/Thomas_Weise__Global_Optimization_Algorithms_Theory_and_Application), T. Weise, 2013.
